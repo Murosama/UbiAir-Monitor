@@ -1,2 +1,2 @@
 # UbiAir-Monitor
-UbiAir simplifies airport network management by automating Ubiquiti access point monitoring and configuration. It provides real-time device status updates and network performance metrics to ensure optimal Wi-Fi service for airport operations.
+UbiAir is a Flask-based system designed for managing and monitoring Ubiquiti access points in airports. The system helps administrators track access point statuses, configure devices, and monitor network performance in real-time, ensuring seamless Wi-Fi connectivity throughout the airport. UbiAir integrates with the Ubiquiti UniFi controller to automate device management and performance tracking.
