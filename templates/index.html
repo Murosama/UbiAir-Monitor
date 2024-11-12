@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UbiAir - Ubiquiti AP Management</title>
+</head>
+<body>
+    <h1>Ubiquiti Access Point Management</h1>
+    <h2>Access Points</h2>
+    <ul>
+        {% for ap in aps %}
+        <li>
+            {{ ap.ap_name }} - IP: {{ ap.ip_address }} - Status: {{ ap.status }}
+            <a href="{{ url_for('update_status', ap_id=ap.id) }}">Update Status</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Add New Access Point</h3>
+    <form action="{{ url_for('add_ap') }}" method="POST">
+        <input type="text" name="ap_name" placeholder="AP Name" required>
+        <input type="text" name="ip_address" placeholder="IP Address" required>
+        <button type="submit">Add AP</button>
+    </form>
+</body>
+</html>
